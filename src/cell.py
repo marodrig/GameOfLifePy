@@ -1,10 +1,9 @@
 class Cell:
     def __hash__(self) -> int:
-        return 31 * int(self.x + self.y)
+        return 31 * hash((self.x, self.y))
 
     def __eq__(self, other: object) -> bool:
-        assert isinstance(other, Cell)
-        return self.x == other.x and self.y == other.y
+        return isinstance(other, self.__class__) and self.x == other.x and self.y == other.y
 
     def __str__(self) -> str:
         return "X cord: %d Y cord: %d" % (self.x, self.y)
@@ -20,5 +19,5 @@ class Cell:
     def get_cord_x(self) -> int:
         return self.x
 
-    def get_is_alive(self):
+    def get_is_alive(self) -> bool:
         return self.is_alive
