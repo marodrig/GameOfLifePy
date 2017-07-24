@@ -1,4 +1,7 @@
 class Cell:
+    def __ne__(self, other: object) -> bool:
+        return not self.__eq__(other)
+
     def __hash__(self) -> int:
         return 31 * hash((self.x, self.y))
 

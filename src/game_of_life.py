@@ -4,7 +4,7 @@ from src.cell import Cell
 class GameOfLife:
     def __init__(self):
         self.set_cells = set()
-        pass
+
 
     def add_cell(self, cell: Cell):
         self.set_cells.add(cell)
@@ -25,6 +25,10 @@ class GameOfLife:
                 list_of_neighbours.append(c)
         return list_of_neighbours
 
-    def get_next_iteration(self):
+    def get_next_iteration(self) -> None:
         for c in self.set_cells:
-            c.is_alive = False
+            number_of_neighbours = len(self.get_neighbours(c))
+            if number_of_neighbours < 2 or number_of_neighbours > 3:
+                c.is_alive = False
+            elif not c.is_alive and number_of_neighbours == 3:
+                c.is_alive ^= True
