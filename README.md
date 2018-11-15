@@ -8,7 +8,7 @@ Conway game of life implemented in Python following TDD principles.
 ## Table of Contents (click to expand)
 
 1. [Features](#features)
-2. [Installation](#quick-start-&-installation)
+2. [Installation](##quick-start--installation)
 3. [API reference]()
 4. [Tests](#tests)
 5. [Usage](#usage)
