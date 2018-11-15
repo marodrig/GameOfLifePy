@@ -5,7 +5,7 @@ Conway game of life implemented in Python following TDD principles.
 
 ## Why should you care about GameOfLifePy?
 
-## Table of Contents (click to expand)
+## Table of Contents
 
 1. [Features](#features)
 2. [Installation](##quick-start--installation)
